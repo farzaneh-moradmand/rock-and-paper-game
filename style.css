@@ -1,54 +1,80 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 30px;
-    font-family: Arial;
- }
- body{
-    background-color: #000000;
- }
- .calc{
-    width: 400px;
-    margin: 100px auto;
- }
- .display{
-    color: #ffffff;
-    text-align: right;
-    font-size: 60px;
-    padding: 20px;
- }
- /* .keypad{
- 
- }
- .keypad-table{
- 
- } */
- .keypad-table tr:first-child .key{
-    background-color: #a5a5a5;
- }
- .keypad-table tr:first-child .key:active{
-    background-color: #a5a5a590;
- }
- .keypad-table tr td:last-child .key{
-    background-color: #ffa45c;
- }
- .keypad-table tr td:last-child .key:active{
-    background-color: #ffa45ccc;
- }
- .key{
-    width: 90px;
-    height: 90px;
-    border: 1px solid black;
-    text-align: center;
-    line-height: 90px;
-    border-radius: 90px;
-    margin: 5px;
-    background-color: #333333;
-    color: #ffffff;
-    cursor: pointer;
-    user-select: none;
- }
- .key:active{
-    background-color: #33333390;
- }
+/* WEB230 Final Project - Hangman Game */
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   height: 100%;
+   margin: 0;
+}
+
+body {
+   margin: 0;
+   display: grid;
+   grid-template-rows: 6em auto 300px 6rem 2rem;
+   align-content: flex-start;
+   height: 100%;
+   text-align: center;
+   font-size: 2rem;
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+   text-align: center;
+}
+
+#letters {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 1em 0;
+   font-family: 'Comic Sans MS', sans-serif;
+}
+
+#letters div {
+   margin: 5px;
+   padding-top: 0.5em;
+   border: 1px solid gray;
+   color: darkgreen;
+   width: 2em;
+   height: 2em;
+   line-height: 0.9;
+   overflow: hidden;
+}
+
+#letters div:hover {
+   background-color: palegreen;
+}
+
+#clue p {
+   margin: 0;
+   font-size: 3rem;
+   letter-spacing: 0.5em;
+   font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* 
+This class will grey out the letters as they are used. 
+Just add the class "used".
+*/
+#letters div.used {
+   background-color: lightgray;
+   opacity: 0.5;
+}
+
+section#image {
+   text-align: center;
+}
+
+/* 
+Display the message when the game is over. 
+Hide it at the beginning. 
+*/
+section#gameover p {
+   text-align: center;
+   font-size: 1rem;
+   display: none;
+}
+
+/* WEB230 Final Project Winter 2021 */
